@@ -21,7 +21,9 @@ const NavBar = () => {
         <Link to="/">Home</Link>
         <Link to="/cars">Cars</Link>
         <Link to="/about">About</Link>
+        <Link to="/offer" > Offer</Link>
         <Link to="/contact">Contact</Link>
+
         {userInfo && !userInfo.isAdmin ? (
           <Link
             to="/my-account"

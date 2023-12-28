@@ -23,6 +23,10 @@ import EditCars from './pages/EditCars'
 import CreateCars from './pages/CreateCars'
 import StripePay from './components/StripePay'
 import StripeContainer from './components/StripeContainer'
+import Payment from './components/Payment'
+import Offer from './components/Offer'
+import Forgot from './pages/Forgot'
+
 
 function App() {
   return (
@@ -55,6 +59,9 @@ function App() {
               element={<StripeContainer />}
             />
           </Route>
+          <Route path="payment" element={<Payment />} />
+          <Route path="offer" element={<Offer/>} />
+          <Route path="forgot" element={<Forgot/>} />
           <Route element={<ProtectedRoute />}>
             <Route path="admin" element={<AdminHome />}>
               <Route path="dashboard" element={<Dashboard />} />

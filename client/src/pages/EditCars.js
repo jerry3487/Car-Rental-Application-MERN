@@ -17,6 +17,7 @@ const EditCars = () => {
     transmission: '',
     yearModel: '',
     seatCapacity: '',
+    odometer:'',
     fuelType: '',
     images: [],
   })
@@ -28,6 +29,7 @@ const EditCars = () => {
     transmission,
     yearModel,
     seatCapacity,
+    odometer,
     fuelType,
     images,
   } = formData
@@ -62,6 +64,7 @@ const EditCars = () => {
           transmission: car.transmission,
           yearModel: car.yearModel,
           seatCapacity: car.seatCapacity,
+          odometer: car.odometer,
           fuelType: car.fuelType,
         }))
       }
@@ -119,6 +122,7 @@ const EditCars = () => {
         transmission,
         yearModel,
         seatCapacity,
+        odometer,
         fuelType,
         images,
       })
@@ -182,6 +186,14 @@ const EditCars = () => {
         type="text"
         name="fuelType"
         value={fuelType}
+        onChange={onChange}
+        className="input input-bordered w-full mb-6"
+      />
+      <label htmlFor="fueltype">ODO Meter</label>
+      <input
+        type="text"
+        name="odometer"
+        value={odometer}
         onChange={onChange}
         className="input input-bordered w-full mb-6"
       />

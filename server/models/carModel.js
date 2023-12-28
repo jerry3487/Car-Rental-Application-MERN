@@ -32,6 +32,10 @@ const carSchema = new Schema(
       type: Number,
       required: true,
     },
+    odometer: {
+      type: Number,
+      required: true,
+    },
     fuelType: {
       type: String,
       required: true,

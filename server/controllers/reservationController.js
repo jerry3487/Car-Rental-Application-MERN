@@ -126,6 +126,22 @@ const deleteReservation = async (req, res) => {
   }
 }
 
+//delete booking
+const deleteBooking = async (req, res) => {
+  const { id } = req.params
+  const reservation = await Reservation.findById(id)
+  if (reservation) {
+    const car = await Car.findById(reservation.reservationItem.car)
+    car.isReserved = false
+    await car.save()
+
+    await reservation.remove()
+    res.status(200).json('Reservation deleted')
+  } else {
+    res.status(400).json({ message: 'Could not delete!' })
+  }
+}
+
 export {
   createReservation,
   getAllReservations,
@@ -134,4 +150,6 @@ export {
   getReservationsByUserId,
   reservationToPaid,
   reservationById,
+  deleteBooking
+  
 }

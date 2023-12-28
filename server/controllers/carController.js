@@ -76,6 +76,7 @@ const updateCarById = async (req, res) => {
     transmission,
     yearModel,
     seatCapacity,
+    odometer,
     fuelType,
     images,
   } = req.body
@@ -98,6 +99,7 @@ const updateCarById = async (req, res) => {
         (car.transmission = transmission || car.transmission),
         (car.yearModel = yearModel || car.yearModel),
         (car.seatCapacity = seatCapacity || car.seatCapacity),
+        (car.odometer = odometer || car.odometer),
         (car.fuelType = fuelType || car.fuelType),
         (car.images = urlImages || car.images)
 
@@ -111,6 +113,7 @@ const updateCarById = async (req, res) => {
         transmission: updatedCar.transmission,
         yearModel: updatedCar.yearModel,
         seatCapacity: updatedCar.seatCapacity,
+        odometer: updatedCar.odometer,
         fuelType: updatedCar.fuelType,
         images: updatedCar.images,
       })
@@ -129,6 +132,7 @@ const createCar = async (req, res) => {
     transmission,
     yearModel,
     seatCapacity,
+    odometer,
     fuelType,
     images,
   } = req.body
@@ -146,6 +150,7 @@ const createCar = async (req, res) => {
       transmission,
       yearModel,
       seatCapacity,
+      odometer,
       fuelType,
       images: urlImages,
     })

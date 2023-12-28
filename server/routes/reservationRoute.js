@@ -7,6 +7,8 @@ import {
   getReservationsByUserId,
   reservationToPaid,
   reservationById,
+  deleteBooking
+
 } from '../controllers/reservationController.js'
 import { admin, protect } from '../middlewares/authMiddleware.js'
 
@@ -25,4 +27,5 @@ router
 router.route('/:id/paid').put(protect, reservationToPaid)
 
 router.route('/:id/details').get(protect, reservationById)
+router.route("/:id/cancel").delete(protect,deleteBooking)
 export default router

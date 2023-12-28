@@ -46,6 +46,7 @@ const MyAccount = () => {
               <p className="hidden sm:block">Reservation</p>
             </Link>
           </li>
+         
           <li onClick={logoutHandler}>
             <span>
               <FaSignInAlt />
