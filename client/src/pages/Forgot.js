@@ -89,9 +89,6 @@ export default function ForgotPassword() {
                <button type="submit" style={buttonStyle}>
                     Submit
                 </button> 
-                {/* <Link to="/sign-in" className="link link-primary">
-          <button>Submit</button>
-        </Link> */}
             </form>
         </div>
     );

@@ -119,18 +119,6 @@ const EditUser = () => {
         onChange={onChange}
         className="input input-bordered w-full mb-6"
       />
-      {/* <label htmlFor="address">Address</label>
-      <input
-        type="text"
-        placeholder="Enter address"
-        className="input input-bordered w-full mb-6"
-      />
-      <label htmlFor="city">City</label>
-      <input
-        type="text"
-        placeholder="Enter City"
-        className="input input-bordered w-full mb-6"
-      /> */}
       <button className="btn mt-6">Send</button>
     </form>
   )

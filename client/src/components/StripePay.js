@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -84,18 +81,6 @@ const NormalPayment = () => {
       setLoading(false);
     }, 2000);
   };
-
-  //   setLoading(true);
-  //   // Simulating payment process with a delay
-  //   setTimeout(() => {
-  //     setPaymentSuccess(true);
-  //     setLoading(false);
-  //   }, 2000);
-  // };
-
-  // if (loading) {
-  //   return <Spinner />;
-  // }
 
   return (
     <>

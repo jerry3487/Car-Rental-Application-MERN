@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import Slider from '../components/Slider'
@@ -110,9 +107,6 @@ const CarDetails = () => {
   const calculateRentalCost = () => {
     // Price per KM on type of car (replace with your actual logic)
     const pricePerKM = car.pricePerDay / 100; // Example: 1% of the price per day
-
-    // Tax (replace with your actual logic)
-    //const tax = 0.3; // Example: 10%
 
     // Discount (replace with your actual logic)
     const discount = 0.05; // Example: 5%
@@ -227,14 +221,6 @@ const CarDetails = () => {
         placeholder="Enter distance in km"
       />
       <p>Loyalty Bonus: {loyaltyBonus} point(s)</p>
-
-
-
-
-
-
-
-
               {userInfo ? (
                 <button
                   className={`btn btn-accent mt-5 ${
@@ -254,10 +240,8 @@ const CarDetails = () => {
         <Alert variant="alert-error" message={error} />
       ) : (
         <>
-          {/* ... (other code) */}
           <div className="flex flex-col">
             Offer Price:<p className="text-4xl text-accent mb-5">{calculateRentalCost()} ₹</p>
-            {/* ... (other code) */}
           </div>
           
         </>

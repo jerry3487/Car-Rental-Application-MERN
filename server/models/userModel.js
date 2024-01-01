@@ -31,9 +31,6 @@ const userSchema = new Schema(
   },
   { timestamps: true }
 )
-// userSchema.methods.showName = function () {
-//   return this.name
-// }
 
 userSchema.methods.comparePasswords = async function (data) {
   return await bcrypt.compare(data, this.password)
@@ -55,10 +52,5 @@ userSchema.pre('save', async function save(next) {
 })
 
 const User = mongoose.model('User', userSchema)
-
-// const user = new User({ name: 'Fisnik' })
-
-// const result = user.showName()
-// console.log(result)
 
 export default User
